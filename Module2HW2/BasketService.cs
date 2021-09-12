@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Module2HW2
 {
-    public class BucketService
+    public class BasketService
     {
         private static double _totalPrice = 0;
-        public void AddProductsToBucket()
+        public void AddProductsToBasket()
         {
             var productProvider = new ProductProvider();
-            var bucket = new Bucket();
+            var basket = new Basket();
             for (var i = 0; i < 10; i++)
             {
                 var temp = productProvider.GetChosenProducts(i);
-                bucket.ProductsInBucket[i] = temp;
+                basket.ProductsInBasket[i] = temp;
                 if (temp != null)
                 {
-                    _totalPrice += bucket.ProductsInBucket[i].Price;
+                    _totalPrice += basket.ProductsInBasket[i].Price;
                 }
             }
         }

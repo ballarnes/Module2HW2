@@ -13,12 +13,11 @@ namespace Module2HW2
             var user1 = new User() { Name = "Alex", Email = "alex@email.com", Number = "+123456789", PrefferedCurrency = Currency.USD };
             var user2 = new User() { Name = "Maria", Number = "+987654321", PrefferedCurrency = Currency.UAH };
             var products = new ProductService();
-            var bucketservice = new BucketService();
+            var basketService = new BasketService();
             var ordered = new OrderService();
-            var bucket = new Bucket();
             products.AddProducts();
             products.ChooseProducts();
-            bucketservice.AddProductsToBucket();
+            basketService.AddProductsToBasket();
             int chooseUser = new Random().Next(1, 3);
             switch (chooseUser)
             {

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Module2HW2
 {
-    public class Bucket
+    public class Basket
     {
-        private static Product[] _productsInBucket = new Product[10];
+        private static Product[] _productsInBasket = new Product[10];
 
-        public Product[] ProductsInBucket
+        public Product[] ProductsInBasket
         {
             get
             {
-                return _productsInBucket;
+                return _productsInBasket;
             }
         }
     }

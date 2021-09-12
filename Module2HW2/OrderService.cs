@@ -10,7 +10,7 @@ namespace Module2HW2
     {
         public void OrderProducts(User user)
         {
-            var bucketService = new BucketService();
+            var bucketService = new BasketService();
             var notificationService = new NotificationService();
             double totalPrice = bucketService.GetTotalPrice();
             if (user.PrefferedCurrency == Currency.UAH)
