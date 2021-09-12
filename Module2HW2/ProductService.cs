@@ -29,7 +29,9 @@ namespace Module2HW2
             var productProvider = new ProductProvider();
             for (var i = 0; i < _quantityOfChosenProducts; i++)
             {
-                productProvider.ChosenProducts[i] = _products[new Random().Next(0, 14)];
+                var randomProduct = new Random().Next(0, 14);
+                productProvider.ChosenProducts[i] = _products[randomProduct];
+                _products[randomProduct].IsExist = false;
             }
         }
     }
